@@ -9,14 +9,20 @@
             </li>
             <li class="nav-item">
                 <form class="d-flex" role="search">
-                    <button class="btn btn-outline-success" type="submit"><i class='bi bi-search'></i></button>
+                    <button class="btn btn-outline-success" type="submit" routerLink='mmm'><i class='bi bi-search'></i></button>
                   </form>
             </li>
         </div>
     </div>
   </nav>
 
-  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-
-
-  
+<div class="container mt-3" *ngIf="showSearch">
+    <form role="search" method="get" action="https://www.compagnie-fiduciaire.com/" class="form-inline">
+      <div class="input-group">
+        <input type="search" class="form-control" placeholder="Rechercher" name="s" required>
+        <div class="input-group-append">
+          <button type="submit" class="btn btn-primary">Rechercher</button>
+        </div>
+      </div>
+    </form>
+  </div>
