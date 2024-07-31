@@ -2,16 +2,28 @@
     <div class="container justify-content-end">
         <div class="nav ">
             <li class="nav-item">
-                <a class="nav-link active"  href='#' style="color:white">Nous rejoindre</a>
+                <a *ngIf="showSearch==true" class="nav-link active"  href='#' style="color:white">Nous rejoindre</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href='#' style="color:white">Contacter</a>
+                <a *ngIf="showSearch==true" class="nav-link active" href='#' style="color:white">Contacter</a>
             </li>
             <li class="nav-item">
+
                 <form class="d-flex" role="search">
-                    <button class="btn btn-outline-success" type="submit" routerLink='mmm'><i class='bi bi-search'></i></button>
+                    <button class="btn btn-outline-success" type="submit" (click)= "toggleSearch()"><i class='bi bi-search'></i></button>
                 </form>
             </li>
         </div>
     </div>
 </nav>
+
+<div class="container mt-3" *ngIf="showSearch">
+    <form role="search" method="get" action="https://www.compagnie-fiduciaire.com/" class="form-inline">
+      <div class="input-group">
+        <input type="search" class="form-control" placeholder="Rechercher" name="s" required>
+        <div class="input-group-append">
+        </div>
+      </div>
+ </form>
+</div>
+

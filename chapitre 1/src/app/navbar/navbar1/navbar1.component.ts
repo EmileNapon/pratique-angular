@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar1.component.css']
 })
 export class Navbar1Component {
-  showSearch: boolean = false;
+  showSearch: boolean = true;
 
   toggleSearch() {
     this.showSearch = !this.showSearch;
